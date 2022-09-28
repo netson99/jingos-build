@@ -34,6 +34,7 @@ options kwayland
 end options 
 
 module jkwayland-server
+    #repository git@github.com:netson99/kwayland-server.git
     repository https://github.com/netson99/kwayland-server.git
     branch n1.1.1
 end module
@@ -54,6 +55,7 @@ options kscreenlocker
 end options
 
 options kwin
+    #repository git@github.com:netson99/jing-kwin.git
     repository https://github.com/netson99/kwin.git
     branch master
 end options
@@ -90,6 +92,7 @@ end options
 
 module plasma-phone-components
     repository https://github.com/netson99/plasma-phone-components.git
+    #repository git@github.com:netson99/plasma-phone-components.git
     branch master
 end module
 
@@ -241,39 +244,53 @@ module repowerd
 end module
 
 options kio-extras
+    # repository https://github.com/jing-archive/repowerd.git
     tag v21.04.3
 end options
 
 options kpipewire
+    # repository https://github.com/jing-archive/repowerd.git
     tag v5.25.90
 end options
 
 options libkscreen
+    # repository https://github.com/jing-archive/repowerd.git
     tag v5.21.5
 end options
 
 
 options libksysguard
+    # repository https://github.com/jing-archive/repowerd.git
     tag v5.21.5
 end options
 
 options kactivitymanagerd
+    # repository https://github.com/jing-archive/repowerd.git
     tag v5.21.5
 end options
 
 options milou
+    # repository https://github.com/jing-archive/repowerd.git
     tag v5.21.5
 end options
 
 options oxygen
+    # repository https://github.com/jing-archive/repowerd.git
     tag v5.21.5
 end options
 
 options systemsettings
+    # repository https://github.com/jing-archive/repowerd.git
     tag v5.21.5
 end options
 
 options ksystemstats
+    # repository https://github.com/jing-archive/repowerd.git
     tag v5.22.5
+end options
+
+options kuserfeedback
+    # repository https://github.com/jing-archive/repowerd.git
+    tag v1.0.0
 end options
 
