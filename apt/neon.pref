@@ -1,0 +1,3 @@
+Package: *
+Pin: origin "archive.neon.kde.org"
+Pin-Priority: 999

@@ -1,0 +1,67 @@
+# Module definitions for building KDE Workspace 5
+
+# Usage: Write your own kdesrc-buildrc with only a "global" section
+# (including "branch-group kf5-qt5")
+# then include this file, like this:
+#
+# include extragear/utils/kdesrc-build/kf5-frameworks-build-include
+# include extragear/utils/kdesrc-build/kf5-applications-build-include
+# (or using full paths)
+#
+# You can then add additional modules if desired.
+#
+# This file uses "branch groups" to decide which git branch to use. If you
+# want to add your application here please be sure to update
+# kde-build-metadata repo's "logical-module-structure". It includes a simple
+# tool you can use to validate your change works (or just "kdesrc-build -p
+# your-module" and look for the right branch).
+
+#module jing-kwin
+#   repository https://github.com/netson99/jing-kwin.git
+   #repository kde-projects
+#   branch master
+#end module
+
+module-set layer-shell-qt
+	repository kde-projects
+	tag v5.21.90
+	use-modules layer-shell-qt
+end module-set
+
+module-set kf5-workspace-modules
+    repository kde-projects # Required for branch-group
+    #branch Plasma/5.21
+    tag v5.21.5
+
+    # Compile everything under kde/workspace
+    use-modules workspace 
+
+    # kdesrc-build can build dependencies (that it knows about) even if you forget
+    # to list them all, if you uncomment this line.
+    # include-dependencies true
+
+    # Remove if you're somehow using Windows
+    ignore-modules kwindowsaddons
+    # This module doesn't have a buildsystem
+    ignore-modules breeze-grub
+end module-set
+
+# Update this module but don't install it, it requires write access to /usr
+# Left here instead of kf5-common-options-build-include as it is already tied
+# to the rest of these workspace modules.
+options breeze-plymouth
+    manual-build true
+end options
+
+# For some reason kwalletmanager is in kde/kdeutils, but is considered par of workspace
+module-set kf5-workspace-utils
+    repository kde-projects
+    use-modules kwalletmanager
+end module-set
+
+module-set kf5-baloo-widgets
+    repository kde-projects
+    # Temporarily here. Not workspace-specific.
+    use-modules baloo-widgets
+end module-set
+
