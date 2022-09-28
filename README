@@ -26,6 +26,9 @@
         *- sudo apt update && sudo apt upgrade
         - sudo apt install -y `cat ~/jingos-build/kde-deps-2004-r2.txt`
         - clone kdesrc-build to home directory
+        - mkdir -p ~/.config
+        - mkdir -p ~/.local
+        - cp ~/jingos-build/kdesrc-buildrc ~/.config/
         - install deb package in ~/jingos-build/deb
         - mkdir ~/ksrc
         - mkdir ~/kbuild
