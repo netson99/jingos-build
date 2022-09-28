@@ -1,0 +1,3 @@
+deb http://archive.neon.kde.org/release focal main
+deb-src http://archive.neon.kde.org/release focal main
+

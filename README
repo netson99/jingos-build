@@ -1,0 +1,41 @@
+1. Clone jingos-build to home directory
+
+2. Build ext4 image disk size 32G
+    - qemu-img create jx64.img 32G
+    - mkfs.ext4 jx64.img
+    - mkdir ~/jx64-root
+    - sudo ~/jingos-build/ub2004-x64.sh ~/jx64-root
+
+3. Prepare kdesrc-build environtment on 
+    - run container by cmd: sudo systemd-nspawn -D ~/jx64-root -M jx64
+    - from inside the container run cmd:
+    	- useradd -m -s /bin/bash jos
+        - passwd jos
+    	- edit /etc/sudoers and make username jos run sudo without password
+      		jos  ALL=(ALL:ALL) NOPASSWD: ALL 
+        - edit /etc/hosts and add: 127.0.1.1 jx6x
+        - edit /etc/hostname to jx64 
+    - exit from container
+    - sudo cp -r ~/jingos-build ~/jx64-root/home/jos/
+    - setup for the systemd-nspawn  networking
+    - run container with full network support: sudo systemd D ~/jx64-root -M jx64 -bn
+    - from inside the container run cmd:
+    	- login with username: jos
+        - sudo cp ~/jingos-build/apt/*.list /etc/apt/source.list.d/
+	- sudo cp ~/jingos-build/apt/*.pref /etc/apt/preference.d/
+        - sudo apt update && sudo apt upgrade
+        - sudo apt install -y `cat ~/jingos-build/kde-deps-2004-r2.txt`
+        - clone kdesrc-build to home directory
+        - install deb package in ~/jingos-build/deb
+        - mkdir ~/ksrc
+        - mkdir ~/kbuild
+
+4. Build kde package with kdesrc-build
+     - from inside the container:
+         - cd ~/kdesrc-build 
+         - ./kdesrc-build <kde package name> 
+              - ./kdesrc-build kwin
+     - build all package on JingOS/framework and JingOS/apps repository 
+
+5. root fs disk image ready to test.
+ 
