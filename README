@@ -21,9 +21,9 @@
     - run container with full network support: sudo systemd D ~/jx64-root -M jx64 -bn
     - from inside the container run cmd:
     	- login with username: jos
-        - sudo cp ~/jingos-build/apt/*.list /etc/apt/source.list.d/
-	- sudo cp ~/jingos-build/apt/*.pref /etc/apt/preference.d/
-        - sudo apt update && sudo apt upgrade
+        *- sudo cp ~/jingos-build/apt/*.list /etc/apt/sources.list.d/
+	*- sudo cp ~/jingos-build/apt/*.pref /etc/apt/preferences.d/
+        *- sudo apt update && sudo apt upgrade
         - sudo apt install -y `cat ~/jingos-build/kde-deps-2004-r2.txt`
         - clone kdesrc-build to home directory
         - install deb package in ~/jingos-build/deb
@@ -38,4 +38,7 @@
      - build all package on JingOS/framework and JingOS/apps repository 
 
 5. root fs disk image ready to test.
- 
+
+
+note for x64 build the *- cmd  has been execute on  image build process.
+
