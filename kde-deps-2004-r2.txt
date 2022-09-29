@@ -4,6 +4,7 @@ bison
 breeze-dev
 build-essential
 bzr
+check
 cmake
 cmake-data
 debhelper
@@ -16,6 +17,9 @@ gir1.2-gstreamer-1.0
 git
 gperf
 icu-devtools
+libandroid-properties-dev
+libhardware-dev
+android-headers-19
 libaccounts-glib-dev
 libappstreamqt-dev
 libapr1
@@ -214,3 +218,12 @@ python3-pip
 python3-setuptools 
 python3-wheel 
 ninja-build
+meson
+libgbm-dev 
+libepoxy-dev
+libavcodec-dev 
+libavutil-dev 
+libavformat-dev 
+libswscale-dev 
+libdrm-dev
+

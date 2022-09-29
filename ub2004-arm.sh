@@ -30,9 +30,12 @@ rm "$dest/etc/resolv.conf" # systemd configures this
 [ -f "$dest/etc/securetty" ] && \
 	printf 'pts/%d\n' $(seq 0 10) >>"$dest/etc/securetty"
 >"$dest/etc/fstab"
-#systemd-nspawn -q -D "$dest" /usr/bin/apt-get update
-#systemd-nspawn -q -D "$dest" /usr/bin/apt-get -y upgrade
-#systemd-nspawn -q -D "$dest" /usr/bin/apt-get install -y ubuntu-minimal vim openssh-server
+cp /usr/bin/qemu-aarch64-static $dest/usr/bin/
+cp ~/jingos-build/apt/*.list $dest/etc/apt/sources.list.d/
+cp ~/jingos-build/apt/*.pref $dest/etc/apt/preferences.d/
+systemd-nspawn -q -D "$dest" /usr/bin/apt-get update
+systemd-nspawn -q -D "$dest" /usr/bin/apt-get -y upgrade
+systemd-nspawn -q -D "$dest" /usr/bin/apt-get install -y ubuntu-minimal vim openssh-server
 
 
 
