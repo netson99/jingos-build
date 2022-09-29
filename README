@@ -4,7 +4,11 @@
     - qemu-img create jx64.img 32G
     - mkfs.ext4 jx64.img
     - mkdir ~/jx64-root
-    - sudo ~/jingos-build/ub2004-x64.sh ~/jx64-root
+    - for x64 image:
+    	- sudo ~/jingos-build/ub2004-x64.sh ~/jx64-root
+    - for arm64 image:
+        - install qemu-user-static for arm64
+        - sudo ~/jingos-build/ub2004-arm64.sh ~/jx64-root
 
 3. Prepare kdesrc-build environtment on 
     - run container by cmd: sudo systemd-nspawn -D ~/jx64-root -M jx64
@@ -43,5 +47,6 @@
 5. root fs disk image ready to test.
 
 
-note for x64 build the *- cmd  has been execute on  image build process.
-
+note :
+- check if already exist in the image => the *- cmd  has been execute on  image build process.
+- to install the check the dependency : sudo apt build-dep <package> but only install non kde package and for kde package build from source
