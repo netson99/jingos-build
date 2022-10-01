@@ -20,14 +20,14 @@
         - edit /etc/hosts and add: 127.0.1.1 jx6x
         - edit /etc/hostname to jx64 
     - exit from container
-    - sudo cp -r ~/jingos-build ~/jx64-root/home/jos/
+    - sudo cp -r ~/jingos-build ~/jx64-root/home/jos/src/
     - setup for the systemd-nspawn  networking
     - run container with full network support: sudo systemd D ~/jx64-root -M jx64 -bn
     - from inside the container run cmd:
     	- login with username: jos
-        *- sudo cp ~/jingos-build/apt/ubport.list /etc/apt/sources.list.d/
-	*- sudo cp ~/jingos-build/apt/ubport.pref /etc/apt/preferences.d/
-	*- sudo cp ~/jingos-build/apt/k580.pref /etc/apt/preferences.d/
+        *- sudo cp ~/src/jingos-build/apt/ubport.list /etc/apt/sources.list.d/
+	*- sudo cp ~/src/jingos-build/apt/ubport.pref /etc/apt/preferences.d/
+	*- sudo cp ~/src/jingos-build/apt/k580.pref /etc/apt/preferences.d/
 	*- add ppa for kde-5.8 and qt5.15 :
 		ppa:savoury1/build-tools
   		ppa:savoury1/backports
@@ -42,14 +42,14 @@
   		ppa:savoury1/kde-5-8
   		ppa:savoury1/qt-5-15
         *- sudo apt update && sudo apt upgrade
-        - sudo apt install -y `cat ~/jingos-build/kde-deps-2004-r2.txt`
+        - sudo apt install -y `cat ~/src/jingos-build/kde-deps-2004-r2.txt`
         or
         - sudo apt build-dep plasma-desktop
         - clone kdesrc-build to home directory
         - mkdir -p ~/.config
         - mkdir -p ~/.local
-        - cp ~/jingos-build/kdesrc-buildrc ~/.config/
-        - install deb package in ~/jingos-build/pkg-5.15.2
+        - cp ~/src/jingos-build/kdesrc-buildrc ~/.config/
+        - install deb package in ~/src/jingos-build/pkg-5.15.2
         - mkdir ~/ksrc
         - mkdir ~/kbuild
 
