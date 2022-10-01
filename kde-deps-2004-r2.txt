@@ -20,6 +20,8 @@ icu-devtools
 libandroid-properties-dev
 libhardware-dev
 android-headers-19
+libqt5webview5
+libmlt7
 libaccounts-glib-dev
 libappstreamqt-dev
 libapr1
@@ -226,4 +228,8 @@ libavutil-dev
 libavformat-dev 
 libswscale-dev 
 libdrm-dev
-
+libepoxy-dev 
+libpostproc-dev 
+libavfilter-dev 
+libavdevice-dev 
+libpipewire-0.3-dev

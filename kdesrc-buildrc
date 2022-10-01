@@ -53,33 +53,33 @@ global
 end global
 
 #JingOS Build
-include ~/jingos-build/jx64-plasma.include
+include ~/src/jingos-build/jx64-plasma.include
 
 # Common options that should be set for some KDE modules no matter how
 # kdesrc-build finds them. Do not comment these out unless you know
 # what you are doing.
-include ~/kdesrc-build/kf5-common-options-build-include
+include ~/src/kdesrc-build/kf5-common-options-build-include
 
 # Refers to the qt5 file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
-# include ~/kdesrc-build/qt5-build-include
+# include ~/src/kdesrc-build/qt5-build-include
 
 # Support libraries that use Qt5
-# include ~/kdesrc-build/custom-qt5-libs-build-include
+# include ~/src/kdesrc-build/custom-qt5-libs-build-include
 
 # Refers to the kf5-frameworks file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
-include ~/jingos-build/kf5-frameworks-build-include
+include ~/src/jingos-build/kf5-frameworks-build-include
 
 # Refers to the kf5-workspace file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
-include ~/jingos-build/kf5-workspace-build-include
+include ~/src/jingos-build/kf5-workspace-build-include
 
 # Refers to the kf5-applications file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
-# include ~/kdesrc-build/kf5-applications-build-include
+# include ~/src/kdesrc-build/kf5-applications-build-include
 
 # Refers to the kf5-kdepim file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
-# include ~/kdesrc-build/kf5-kdepim-build-include
+# include ~/src/kdesrc-build/kf5-kdepim-build-include
 

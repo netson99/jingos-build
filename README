@@ -25,15 +25,31 @@
     - run container with full network support: sudo systemd D ~/jx64-root -M jx64 -bn
     - from inside the container run cmd:
     	- login with username: jos
-        *- sudo cp ~/jingos-build/apt/*.list /etc/apt/sources.list.d/
-	*- sudo cp ~/jingos-build/apt/*.pref /etc/apt/preferences.d/
+        *- sudo cp ~/jingos-build/apt/ubport.list /etc/apt/sources.list.d/
+	*- sudo cp ~/jingos-build/apt/ubport.pref /etc/apt/preferences.d/
+	*- sudo cp ~/jingos-build/apt/k580.pref /etc/apt/preferences.d/
+	*- add ppa for kde-5.8 and qt5.15 :
+		ppa:savoury1/build-tools
+  		ppa:savoury1/backports
+  		ppa:savoury1/python
+  		ppa:savoury1/fonts
+  		ppa:savoury1/graphics
+  		ppa:savoury1/multimedia
+  		ppa:savoury1/ffmpeg4
+  		ppa:savoury1/vlc3
+  		ppa:savoury1/display
+  		ppa:savoury1/llvm-defaults-12
+  		ppa:savoury1/kde-5-8
+  		ppa:savoury1/qt-5-15
         *- sudo apt update && sudo apt upgrade
         - sudo apt install -y `cat ~/jingos-build/kde-deps-2004-r2.txt`
+        or
+        - sudo apt build-dep plasma-desktop
         - clone kdesrc-build to home directory
         - mkdir -p ~/.config
         - mkdir -p ~/.local
         - cp ~/jingos-build/kdesrc-buildrc ~/.config/
-        - install deb package in ~/jingos-build/deb
+        - install deb package in ~/jingos-build/pkg-5.15.2
         - mkdir ~/ksrc
         - mkdir ~/kbuild
 
@@ -42,11 +58,14 @@
          - cd ~/kdesrc-build 
          - ./kdesrc-build <kde package name> 
               - ./kdesrc-build kwin
-     - build all package on JingOS/framework and JingOS/apps repository 
+     - build all package on JingOS/framework and JingOS/apps repository
+          ./kdesrc-build --no-include-dependencies `cat ~/jingos-build/jingos-frameworks.build`
+          ./kdesrc-build --no-include-dependencies `cat ~/jingos-build/jingos-systemui.build`
+          ./kdesrc-build --no-include-dependencies `cat ~/jingos-build/jingos-apps.build`
 
 5. root fs disk image ready to test.
 
 
 note :
 - check if already exist in the image => the *- cmd  has been execute on  image build process.
-- to install the check the dependency : sudo apt build-dep <package> but only install non kde package and for kde package build from source
+- to install the check the dependency : sudo apt build-dep <package> but only install non jingos package and for kde package build from source

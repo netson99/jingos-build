@@ -1,0 +1,3 @@
+Package: *
+Pin: origin "ppa.launchpad.net/savoury1/kde-5-80/ubuntu"
+Pin-Priority: 999

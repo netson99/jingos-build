@@ -1,7 +1,6 @@
 module jappmanager
     repository https://github.com/JingOS-team/jappmanager.git
     branch master
-    no-src true
 end module
 
 module qtdeclarative
@@ -20,8 +19,8 @@ options kirigami
 end options
 
 module NetworkManager
-    repository https://github.com/netson99/NetworkManager.git
-    branch n1.1.1
+    repository https://github.com/jing-archive/NetworkManager.git
+    branch master
 end module
 
 options plasma-wayland-protocols
@@ -63,7 +62,7 @@ end options
 
 options layer-shell-qt
     repository https://github.com/netson99/layer-shell-qt.git
-    tag v5.21.5 
+    branch main
 end options
 
 module apps
@@ -178,8 +177,8 @@ options powerdevil
 end options
 
 options bluedevil
-    repository https://github.com/netson99/bluedevil.git
-    tag v5.21.5
+    repository https://github.com/jing-archive/bluedevil.git
+    branch master
 end options
 
 module simplelogin
@@ -207,16 +206,6 @@ end module
 options konsole
     #repository https://github.com/jing-archive/konsole.git
     branch release/21.04
-end options
-
-options kate 
-    #repository https://github.com/jing-archive/konsole.git
-    branch release/21.04
-end options
-
-options okular 
-    #repository https://github.com/jing-archive/konsole.git
-    branch release/22.04
 end options
 
 options kio
@@ -310,8 +299,40 @@ options kuserfeedback
     tag v1.0.0
 end options
 
-options qqc2-desktop-style
-    manual-build true
-    tag v5.80.0
-end options
+module-set JFrameworks
+    repository kde-projects #jArc: #jingArchive #https://github.com/jing-archive/
+    use-modules plasma-wayland-protocols  
+    ignore-modules qqc2-desktop-style
+end module-set
+
+module-set NFrameworks
+    repository kde-projects #https://github.com/netson99/
+    use-modules kio kwayland kwin plasma-framework powerdevil solid
+    ignore-modules qqc2-desktop-style
+end module-set
+
+module-set JSystemUI
+    repository kde-projects #https://github.com/jing-archive/
+    use-modules libdebconf-kde
+    ignore-modules qqc2-desktop-style
+end module-set
+
+module-set NSystemUI
+    repository kde-projects #https://github.com/netson99/
+    use-modules layer-shell-qt plasma-nano plasma-workspace polkit-kde-agent-1 kscreen kscreenlocker 
+    ignore-modules qqc2-desktop-style
+end module-set
+
+
+module-set JApps
+    repository kde-projects #https://github.com/jing-archive/
+    use-modules calindori kclock kalk koko bluedevil ffmpegthumbs konsole mauikit plasma-camera plasma-nm plasma-phone-settings plasma-settings  krecorder haruna vvave
+    ignore-modules qqc2-desktop-style 
+end module-set
+
+module-set NApps
+    repository kde-projects #https://github.com/netson99/
+    use-modules discover plasma-desktop
+    ignore-modules qqc2-desktop-style    
+end module-set
 
