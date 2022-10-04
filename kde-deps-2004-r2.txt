@@ -67,7 +67,6 @@ liblcms2-dev
 liblmdb-dev
 libmlt-dev
 libmlt++-dev
-libmlt7-dev
 libnm-dev
 libpackagekitqt5-dev
 libpam0g-dev
