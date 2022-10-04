@@ -1,6 +1,7 @@
 module jappmanager
     repository https://github.com/JingOS-team/jappmanager.git
     branch master
+    no-src true
 end module
 
 module qtdeclarative
@@ -19,8 +20,8 @@ options kirigami
 end options
 
 module NetworkManager
-    repository https://github.com/jing-archive/NetworkManager.git
-    branch master
+    repository https://github.com/netson99/NetworkManager.git
+    branch n1.1.1
 end module
 
 options plasma-wayland-protocols
@@ -62,7 +63,7 @@ end options
 
 options layer-shell-qt
     repository https://github.com/netson99/layer-shell-qt.git
-    branch main
+    tag v5.21.5 
 end options
 
 module apps
@@ -177,8 +178,8 @@ options powerdevil
 end options
 
 options bluedevil
-    repository https://github.com/jing-archive/bluedevil.git
-    branch master
+    repository https://github.com/netson99/bluedevil.git
+    tag v5.21.5
 end options
 
 module simplelogin
@@ -206,6 +207,16 @@ end module
 options konsole
     #repository https://github.com/jing-archive/konsole.git
     branch release/21.04
+end options
+
+options kate 
+    #repository https://github.com/jing-archive/konsole.git
+    branch release/21.04
+end options
+
+options okular 
+    #repository https://github.com/jing-archive/konsole.git
+    branch release/22.04
 end options
 
 options kio
@@ -249,8 +260,8 @@ options kio-extras
 end options
 
 options kpipewire
-    # repository https://github.com/jing-archive/repowerd.git
-    tag v5.25.90
+    repository https://github.com/netson99/kpipewire.git
+    tag v5.21.5
 end options
 
 options libkscreen
@@ -284,6 +295,11 @@ options systemsettings
     tag v5.21.5
 end options
 
+options kirigami-addons
+    # repository https://github.com/jing-archive/repowerd.git
+    branch release/21.05
+end options
+
 options ksystemstats
     # repository https://github.com/jing-archive/repowerd.git
     tag v5.22.5
@@ -292,5 +308,10 @@ end options
 options kuserfeedback
     # repository https://github.com/jing-archive/repowerd.git
     tag v1.0.0
+end options
+
+options qqc2-desktop-style
+    manual-build true
+    tag v5.80.0
 end options
 

@@ -1,0 +1,338 @@
+module jappmanager
+    repository https://github.com/JingOS-team/jappmanager.git
+    branch master
+end module
+
+module qtdeclarative
+    repository https://github.com/jing-archive/qtdeclarative.git
+    branch master
+end module
+
+module qtwayland
+    repository https://github.com/jing-archive/qtwayland.git
+    branch master
+end module
+
+options kirigami
+    repository https://github.com/netson99/controlkit.git
+    branch master
+end options
+
+module NetworkManager
+    repository https://github.com/jing-archive/NetworkManager.git
+    branch master
+end module
+
+options plasma-wayland-protocols
+    repository https://github.com/jing-archive/plasma-wayland-protocols.git
+    branch master
+end options
+
+options kwayland
+    repository https://github.com/netson99/kwayland.git
+    branch master
+end options 
+
+module jkwayland-server
+    #repository git@github.com:netson99/kwayland-server.git
+    repository https://github.com/netson99/kwayland-server.git
+    branch n1.1.1
+end module
+
+options plasma-framework
+    repository https://github.com/netson99/plasma-framework.git
+    branch master
+end options
+
+options kscreen
+    repository https://github.com/netson99/kscreen.git
+    branch master
+end options
+
+options kscreenlocker
+    repository https://github.com/netson99/kscreenlocker.git
+    branch master
+end options
+
+options kwin
+    #repository git@github.com:netson99/jing-kwin.git
+    repository https://github.com/netson99/kwin.git
+    branch master
+end options
+
+options layer-shell-qt
+    repository https://github.com/netson99/layer-shell-qt.git
+    branch main
+end options
+
+module apps
+    repository https://github.com/jing-archive/appstore.git
+    branch master
+end module
+
+options polkit-kde-agent-1
+    repository https://github.com/netson99/polkit-kde-agent-1.git
+    branch master
+end options
+
+module qapt
+    repository https://github.com/jing-archive/qapt.git
+    branch master
+end module
+
+options plasma-workspace
+    repository https://github.com/netson99/plasma-workspace.git
+    branch master
+end options
+
+options plasma-nano
+    repository https://github.com/netson99/plasma-nano.git
+    branch master
+end options
+
+module plasma-phone-components
+    repository https://github.com/netson99/plasma-phone-components.git
+    #repository git@github.com:netson99/plasma-phone-components.git
+    branch master
+end module
+
+options plasma-desktop
+    repository https://github.com/netson99/plasma-desktop.git
+    branch master
+end options
+
+options mauikit
+    repository https://github.com/jing-archive/mauikit.git
+    branch master
+end options
+
+options plasma-camera
+    repository https://github.com/jing-archive/plasma-camera.git
+    branch master
+end options
+
+options plasma-settings
+    repository https://github.com/jing-archive/plasma-settings.git
+    branch master
+end options
+
+module index
+    repository https://github.com/jing-archive/index.git
+    branch master
+end module
+
+module plasma-nm
+    repository https://github.com/jing-archive/plasma-nm.git
+    branch master
+end module
+
+options discover
+    repository https://github.com/netson99/plasma-discover.git
+    branch master
+end options
+
+options calindori
+    repository https://github.com/jing-archive/Calindori.git
+    branch master
+end options
+
+options vvave
+    repository https://github.com/jing-archive/vvave.git
+    branch master
+end options
+
+options haruna
+    repository https://github.com/jing-archive/videoplayer.git
+    branch master
+end options
+
+options koko
+    repository https://github.com/jing-archive/Koko.git
+    branch master
+end options
+
+options krecorder
+    repository https://github.com/jing-archive/recorder.git
+    branch master
+end options
+
+options kalk
+    repository https://github.com/jing-archive/Kalk.git
+    branch master
+end options
+
+options kclock
+    repository https://github.com/jing-archive/KClock.git
+    branch master
+end options
+
+module qaptupdator
+    repository https://github.com/jing-archive/qaptupdator.git
+    branch master
+end module
+
+options powerdevil
+    repository https://github.com/netson99/powerdevil.git
+    branch master
+end options
+
+options bluedevil
+    repository https://github.com/jing-archive/bluedevil.git
+    branch master
+end options
+
+module simplelogin
+    repository https://github.com/jing-archive/simplelogin.git
+    branch master
+end module
+
+module maliit-framework
+    repository https://github.com/jing-archive/maliit-framework.git
+    #repository https://github.com/maliit/framework.git
+    #tag 0.99.1
+end module
+
+module maliit-keyboard
+    repository https://github.com/jing-archive/maliit-keyboard.git
+    #repository https://github.com/maliit/keyboard.git
+    #branch master
+end module
+
+module libinput
+    repository https://github.com/jing-archive/libinput.git
+    branch master
+end module
+
+options konsole
+    #repository https://github.com/jing-archive/konsole.git
+    branch release/21.04
+end options
+
+options kio
+    repository https://github.com/netson99/kio.git
+    branch master
+end options
+
+options solid
+    repository https://github.com/netson99/solid.git
+    branch master
+end options
+
+module pulseaudio
+    repository https://github.com/jing-archive/pulseaudio.git
+    branch master
+end module
+
+options ffmpegthumbs
+    repository https://github.com/jing-archive/ffmpegthumbs.git
+    branch master
+end options
+
+module ofono
+    repository https://github.com/jing-archive/ofono.git
+    branch master
+end module
+
+module sensorfw
+    repository https://github.com/jing-archive/sensorfw.git
+    branch master
+end module
+
+module repowerd
+    repository https://github.com/jing-archive/repowerd.git
+    branch master
+end module
+
+options kio-extras
+    # repository https://github.com/jing-archive/repowerd.git
+    tag v21.04.3
+end options
+
+options kpipewire
+    repository https://github.com/netson99/kpipewire.git
+    tag v5.21.5
+end options
+
+options libkscreen
+    # repository https://github.com/jing-archive/repowerd.git
+    tag v5.21.5
+end options
+
+
+options libksysguard
+    # repository https://github.com/jing-archive/repowerd.git
+    tag v5.21.5
+end options
+
+options kactivitymanagerd
+    # repository https://github.com/jing-archive/repowerd.git
+    tag v5.21.5
+end options
+
+options milou
+    # repository https://github.com/jing-archive/repowerd.git
+    tag v5.21.5
+end options
+
+options oxygen
+    # repository https://github.com/jing-archive/repowerd.git
+    tag v5.21.5
+end options
+
+options systemsettings
+    # repository https://github.com/jing-archive/repowerd.git
+    tag v5.21.5
+end options
+
+options kirigami-addons
+    # repository https://github.com/jing-archive/repowerd.git
+    branch release/21.05
+end options
+
+options ksystemstats
+    # repository https://github.com/jing-archive/repowerd.git
+    tag v5.22.5
+end options
+
+options kuserfeedback
+    # repository https://github.com/jing-archive/repowerd.git
+    tag v1.0.0
+end options
+
+module-set JFrameworks
+    repository kde-projects #jArc: #jingArchive #https://github.com/jing-archive/
+    use-modules plasma-wayland-protocols  
+    ignore-modules qqc2-desktop-style
+end module-set
+
+module-set NFrameworks
+    repository kde-projects #https://github.com/netson99/
+    use-modules kio kwayland kwin plasma-framework powerdevil solid
+    ignore-modules qqc2-desktop-style
+end module-set
+
+module-set JSystemUI
+    repository kde-projects #https://github.com/jing-archive/
+    use-modules libdebconf-kde
+    ignore-modules qqc2-desktop-style
+end module-set
+
+module-set NSystemUI
+    repository kde-projects #https://github.com/netson99/
+    use-modules layer-shell-qt plasma-nano plasma-workspace polkit-kde-agent-1 kscreen kscreenlocker 
+    ignore-modules qqc2-desktop-style
+end module-set
+
+
+module-set JApps
+    repository kde-projects #https://github.com/jing-archive/
+    use-modules calindori kclock kalk koko bluedevil ffmpegthumbs konsole mauikit plasma-camera plasma-nm plasma-phone-settings plasma-settings  krecorder haruna vvave
+    ignore-modules qqc2-desktop-style 
+end module-set
+
+module-set NApps
+    repository kde-projects #https://github.com/netson99/
+    use-modules discover plasma-desktop
+    ignore-modules qqc2-desktop-style    
+end module-set
+
