@@ -79,7 +79,6 @@ include ~/src/jingos-build/kf5-workspace-build-include
 # Refers to the kf5-kdepim file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
 # include ~/src/kdesrc-build/kf5-kdepim-build-include
-
 #JingOS Build
 include ~/src/jingos-build/jx64-plasma.include
 #include ~/src/jingos-build/jingmod-plasma.include
