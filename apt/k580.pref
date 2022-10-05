@@ -1,3 +1,7 @@
 Package: *
-Pin: origin "ppa.launchpad.net/savoury1/kde-5-80/ubuntu"
-Pin-Priority: 999
+Pin: release v=20.04,o=LP-PPA-savoury1*
+Pin-Priority: 990
+
+Package: *
+Pin: origin ""
+Pin-Priority: 1010

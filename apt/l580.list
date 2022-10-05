@@ -1,0 +1,1 @@
+deb [trusted=yes] file:/home/ubuntu/src/jingos-build/pkg-5.80/ ./
